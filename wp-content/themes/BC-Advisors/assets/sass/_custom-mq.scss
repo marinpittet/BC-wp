@@ -1,0 +1,38 @@
+$mq-mobile: 480px !default;
+$mq-tablet: 768px !default;
+$mq-desktop: 1024px !default;
+
+// Everything up to portrait smartphones 
+@mixin mobile-layout {
+	@media only screen and (max-width: $mq-mobile) {
+		@content;
+	}
+}
+
+// Landscape smartphones 
+@mixin mobile-landscape {
+	@media only screen and (min-width: $mq-mobile + 1) and (max-width: $mq-tablet - 1) {
+		@content;		
+	}
+}
+
+// Tablets 
+@mixin tablet-layout {
+	@media only screen and (min-width: $mq-tablet) and (max-width: $mq-desktop - 1) {
+		@content;
+	}
+}
+
+// Desktop screens 
+@mixin desktop-layout {
+	@media only screen and (min-width: $mq-desktop) {
+		@content;
+	}
+}
+
+// Retina screens 
+@mixin retina-layout {
+	@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-device-pixel-ratio: 1.5) {
+		@content;
+	}
+}
