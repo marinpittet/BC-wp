@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+add_theme_support( 'post-thumbnails' );
 
 function bc_style() {
 		$theme_data = wp_get_theme();
@@ -32,3 +34,4 @@ function bc_scripts() {
 	}
 add_action( 'wp_enqueue_scripts', 'bc_scripts' );
 ?>	
+

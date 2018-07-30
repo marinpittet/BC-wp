@@ -5,6 +5,7 @@
     <meta charset=<?php bloginfo('charset') ?>>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php bloginfo('name') ?> | <?php bloginfo('description') ?></title>
+    <link rel="icon" href="<?php bloginfo('template_url') ?>/assets/images/BC-favicon-02.png">
 
     <?php wp_head() ?>
 </head>
@@ -17,7 +18,7 @@
                 <i class="far fa-clock"></i><span id="date"></span>
             </div>
             <div class="indicadores">
-                <span class="uf"><strong>UF: </strong> </span>
+                <span class="uf"><strong>UF: </strong></span>
                 <span class="utm"><strong>UTM: </strong></span>
                 <span class="dolar"><strong>USD: </strong></span>
                 <span class="euro"><strong>EUR: </strong></span>

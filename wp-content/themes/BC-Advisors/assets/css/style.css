@@ -247,6 +247,14 @@ nav .navbar .sidenav__items {
 }
 
 /* Seccion 1*/
+.info .equipo {
+  display: none;
+  transition: display 1s;
+}
+.info .quienes-somos {
+  display: block;
+  transition: display 1s; 
+}
 .info .info__img {
   padding: 0;
 }
@@ -254,6 +262,9 @@ nav .navbar .sidenav__items {
   padding-top: 2rem;
   padding-bottom: 2rem;
   border-top: solid 4px #4387EA;
+}
+.info .info__text h1.subtitle {
+  margin-bottom: 5px;
 }
 .info .info__text img {
   border-radius: 5px;
@@ -306,6 +317,9 @@ nav .navbar .sidenav__items {
 
 /* /.Seccion 1 */
 /* Seccion 2 */
+.sec-prod .prod-list .content {
+  display: none;
+}
 .sec-prod {
   margin-top: 10px;
   border-top: solid 1px rgba(69, 134, 234, 0.7);
