@@ -446,13 +446,17 @@ nav .navbar .sidenav__items {
   background-color: #4387EA;
   color: #fff;
   padding: 0 .5rem;
+  cursor: pointer;
+  position: relative;
+  width: 100px;
 }
 .contact .container-contact input.enviar {
   background: none;
   border: none;
-  color: #fff;
-  line-height: 35px;
+  color: transparent;
   font-size: 1rem;
+  cursor: pointer;
+  position: absolute;
 }
 .contact .container-contact .button .fa-paper-plane {
   margin-left: 0.25rem;

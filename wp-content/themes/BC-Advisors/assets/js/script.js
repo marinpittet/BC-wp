@@ -212,4 +212,10 @@ $(function() {
     /* fin To Top button animated
     ----------------------------- */
 
+    /* contact form
+    ----------------------------- */
+    $('#contact-form').click(function(e){
+        e.preventDefault();
+    })
+
 });
