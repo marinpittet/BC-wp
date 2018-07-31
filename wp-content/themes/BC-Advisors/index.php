@@ -99,39 +99,41 @@
                 
                 <div class="column products" id="prod-block">
                     <div class="prod1">
-                            <h1 class="title prod-title"></h1>
-                            <p class="prod-text"></p>            
+                        <div class="logo-fill">
+                            <img src="<?php bloginfo('template_url') ?>/assets/images/logo--trans.png" alt="" id="logo-temp">
+                        </div>
+                        <h1 class="title prod-title"></h1>
+                        <p class="prod-text"></p>            
                     </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<!-- Nuestros clientes -->
 <section>
     <div class="sec-clients" id="clientes">
         <div class="container">
+            <?php query_posts('post_type=clientes&posts_per_page=1'); ?>
+            <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                <div class="columns">
+                    <div class="column subtitle">
+                        <p>Nuestros Clientes</p>
+                    </div>
+                </div>
+            <?php endwhile; endif; ?>
             <div class="columns">
-                <div class="column subtitle">
-                    <p>Nuestros Clientes</p>
-                </div>
-            </div>
-            <div class="columns">
-                <div class="column client">
-                    <img src="http://www.clker.com/cliparts/O/v/c/b/i/6/generic-logo.svg">
-                </div>
-                <div class="column client">
-                    <img src="http://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png">
-                </div>
-                <div class="column client">
-                    <img src="https://root.cern.ch/img/logos/ROOT_Logo/misc/generic-logo-cyan-512.png">
-                </div>
-                <div class="column client">
-                    <img src="https://seeklogo.com/images/G/generic-logo-ECC6ED04F3-seeklogo.com.png">
-                </div>
-                <div class="column client">
-                    <img src="http://generic.com.sg/wp-content/uploads/2015/06/Generic-Logo-Horizontal-FA-01.png">
-                </div>
-            </div>
+                <?php query_posts('post_type=clientes&order=ASC'); ?>
+                <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <div class="column client">
+                        <?php if( get_field('logo_cliente') ): ?>
+                            <a href="<?php the_field('link') ?>" target="_blank">
+                                <img src="<?php the_field('logo_cliente') ?>">
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                <?php endwhile; endif; ?>
+            </div>             
         </div>
     </div>
 </section>
@@ -142,15 +144,10 @@
             <p class="title">Contacto</p>
             <p class="subtitle">Puedes contactarnos mediante el siguiente formulario, responderemos lo antes posible.</p>
             <form>
-                <p>Nombre:</p>
-                <input type="text" name="" placeholder="Nombre">
-                <p>Apellidos:</p>
-                <input type="text" name="" placeholder="Apellidos">
-                <p>Correo electrónico:</p>
-                <input type="text" name="" placeholder="ejemplo@mail.com">
-                <p>Si deseas déjanos un mensaje:</p>
-                <textarea placeholder="Escribe aquí tu mensaje"></textarea>
-                <a class="button">Enviar <i class="far fa-paper-plane"></i></a>
+                <?php query_posts('post_type=contacto'); ?>
+                <?php if(have_posts()): while(have_posts()): the_post(); ?>
+                    <?php the_content(  ) ?>
+                <?php endwhile; endif; ?>
             </form>
         </div>
     </div>

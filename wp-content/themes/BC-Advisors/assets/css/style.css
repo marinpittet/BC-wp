@@ -269,6 +269,7 @@ nav .navbar .sidenav__items {
 .info .info__text img {
   border-radius: 5px;
   max-height: 200px;
+  max-width: 200px;
 }
 .info .info__text #title-current--2 {
   border-top: solid 0px rgba(50, 50, 50, 0.1);
@@ -366,12 +367,22 @@ nav .navbar .sidenav__items {
 .sec-prod .products h1 {
   color: #fff;
 }
-.sec-prod .isotipo {
-  margin-top: 2rem;
+.sec-prod .prod-text img {
+  margin-top: 2.5rem;
   text-align: center;
+}
+.sec-prod .prod1 .logo-fill {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#logo-temp {
+  text-align: center;
+  margin-top: 1rem;
 }
 
 /* /.Seccion 2 */
+/* Seccion 3 */
 .sec-clients {
   background-color: #f1f1f1;
   border-bottom: solid 1px rgba(69, 134, 234, 0.7);
@@ -383,12 +394,15 @@ nav .navbar .sidenav__items {
 .sec-clients .client {
   line-height: 200px;
   padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .sec-clients .client img {
   max-height: 100px;
   vertical-align: middle;
 }
-
+/* /.Seccion 3 */
 /* Contact */
 .contact {
   background-image: url(../images/contact.jpg);
@@ -431,6 +445,14 @@ nav .navbar .sidenav__items {
   border: solid 2px rgba(255, 255, 255, 0.9);
   background-color: #4387EA;
   color: #fff;
+  padding: 0 .5rem;
+}
+.contact .container-contact input.enviar {
+  background: none;
+  border: none;
+  color: #fff;
+  line-height: 35px;
+  font-size: 1rem;
 }
 .contact .container-contact .button .fa-paper-plane {
   margin-left: 0.25rem;

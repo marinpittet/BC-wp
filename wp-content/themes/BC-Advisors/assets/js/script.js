@@ -165,8 +165,12 @@ $(function() {
     // seccion nuestros servicios, cambio de texto on click
     var titulopro = $('.prod-title');
     var textopro = $('.prod-text');
+    var logo = $('#logo-temp');
 
     $('.menu-list a').click(function() {
+        logo.fadeOut('slow', function() {
+            logo.css('display', 'none');
+        });
         var theTitle = $(this, '.list-title').text();
         var theContent = $(this).siblings('.content').html();
         $('.menu-list .is-active').removeClass('is-active');
